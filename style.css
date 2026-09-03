@@ -1,0 +1,709 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #101820;
+}
+
+
+/* ===============================
+   HERO
+   =============================== */
+
+.hero {
+
+    background-image: url("hero-image.png");
+
+    width: 99.9%;
+
+    min-height: 100vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+
+    box-shadow:
+        inset black 0px 0px 400000px 200px;
+}
+
+
+.head {
+
+    color: white;
+
+    font-family: "Playfair Display", serif;
+
+    margin-top: 13%;
+
+    font-size: 42px;
+
+    font-weight: 800;
+}
+
+
+.teachname {
+
+    color: #F4C95D;
+
+    font-family: "Playfair Display", serif;
+
+    margin-top: 5%;
+
+    font-size: 42px;
+
+    font-weight: 800;
+}
+
+
+/* ===============================
+   BUTTON
+   =============================== */
+
+.exp {
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    margin-top: 5%;
+
+    cursor: pointer;
+
+    transition: all 0.35s ease;
+}
+
+
+.exp:hover {
+
+    background: white;
+
+    color: black;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 20px rgba(255, 255, 255, 0.35);
+
+    letter-spacing: 2px;
+}
+
+
+/* ===============================
+   SECOND SECTION
+   =============================== */
+
+.section {
+
+    min-height: 100vh;
+
+    background-image: url("sec-background.png");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-top: 0.1px;
+}
+
+
+.secpart {
+
+    color: white;
+
+    font-size: larger;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-top: 11%;
+}
+
+
+.secpart2 {
+
+    font-size: 150%;
+}
+
+#exp2{
+    margin-bottom: 10%;
+}
+.secsub {
+
+    font-size: 150%;
+
+    font-weight: 700;
+
+    margin-top: 3%;
+
+    display: inline-block;
+}
+
+
+/* ===============================
+   IMAGE SLIDESHOW
+   =============================== */
+
+.slideshow {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background-color: #101820;
+}
+
+
+.slides {
+
+    position: relative;
+
+    width: 85%;
+
+    height: 80vh;
+}
+
+
+/* Individual slide */
+
+.slide {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    overflow: hidden;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+
+.slide.active {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* Image */
+
+.slide img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition:
+        transform 0.8s ease;
+}
+
+
+/* ===============================
+   DESCRIPTION
+   =============================== */
+
+.description {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding:
+        35px
+        25px
+        25px;
+
+    color: white;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(0, 0, 0, 0.9)
+        );
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+
+    pointer-events: none;
+}
+
+
+/* Desktop hover */
+
+.slide.active:hover img {
+
+    transform: scale(1.03);
+}
+
+
+.slide.active:hover .description {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ===============================
+   DOT POINTERS
+   =============================== */
+
+.dots {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 4%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 10px;
+
+    z-index: 10;
+}
+
+
+.dot {
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.4);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.dot.active {
+
+    background: #F4C95D;
+
+    transform: scale(1.35);
+}
+
+
+/* ===============================
+   END
+   =============================== */
+
+.end {
+
+    background-image: url("east bengal.jpeg");
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    padding-top: 0.5%;
+
+    padding-bottom: 3%;
+
+    min-height: 80vh;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+    box-shadow:
+        inset black 0px 0px 400000px 300px;
+}
+
+
+.line {
+
+    display: inline-block;
+
+    width: 130px;
+
+    border: 1px solid white;
+}
+
+
+.last {
+
+    color: white;
+
+    margin-top: 0.5%;
+
+    display: inline-block;
+
+    font-size: xx-large;
+}
+
+
+.emoji {
+
+    font-size: larger;
+}
+
+
+/* ===============================
+   LOADING SCREEN
+   =============================== */
+
+.loader {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: black;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 999999;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition:
+        opacity 0.7s ease,
+        visibility 0.7s ease;
+}
+
+
+.loader.loaded {
+
+    opacity: 0;
+
+    visibility: hidden;
+}
+
+
+.loader-content {
+
+    width: 70%;
+
+    max-width: 500px;
+
+    text-align: center;
+
+    color: white;
+
+    font-family: "Orbitron", sans-serif;
+}
+
+
+.loader-title {
+
+    font-size: clamp(18px, 4vw, 30px);
+
+    margin-bottom: 25px;
+
+    letter-spacing: 4px;
+
+    font-family: "Playfair Display", serif;
+}
+
+
+.loader-bar {
+
+    width: 100%;
+
+    height: 3px;
+
+    background:
+        rgba(255, 255, 255, 0.15);
+
+    overflow: hidden;
+}
+
+
+.loader-progress {
+
+    height: 100%;
+
+    width: 0%;
+
+    background: #D8B36A;
+
+    animation:
+        loadingProgress 2s ease forwards;
+}
+
+
+.loader-status {
+
+    margin-top: 15px;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.6;
+}
+
+
+@keyframes loadingProgress {
+
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+
+
+/* ===============================
+   MOBILE
+   =============================== */
+
+@media (max-width: 600px) {
+
+
+    /* HERO */
+
+    .hero {
+
+        width: 99.9%;
+
+        min-height: 100vh;
+
+        background-position: center;
+
+        background-repeat: no-repeat;
+
+        background-size: cover;
+
+        padding-top: 0.1%;
+
+        padding-bottom: 0.1%;
+
+        box-shadow:
+            inset black 0px 0px 400px 60px;
+    }
+
+
+    .head {
+
+        margin-top: 25%;
+
+        font-size: 42px;
+
+    }
+
+
+    .hero > center > .head > span {
+
+        display: inline-block;
+
+        margin-top: 10%;
+
+        font-size: 100%;
+    }
+
+
+    .teachname {
+
+        margin-top: 12%;
+
+        font-size: 42px;
+    }
+
+
+    .exp {
+
+        margin-top: 20%;
+
+        padding:
+            12px
+            24px;
+    }
+
+
+    /* SECOND SECTION */
+
+    .section {
+
+        min-height: 75vh;
+
+        background-position: center;
+
+        background-repeat: no-repeat;
+
+        background-size: cover;
+
+        padding-top: 0.1px;
+    }
+
+
+    .secpart {
+
+        font-size: large;
+
+        margin-top: 11%;
+    }
+
+
+    .secpart2 {
+
+        font-size: 90%;
+    }
+
+
+    .secsub {
+
+        font-size: 100%;
+
+        font-weight: 700;
+
+        margin-top: 3%;
+
+        display: inline-block;
+    }
+
+
+    #exp2 {
+
+        margin-top: 37%;
+    }
+
+
+    /* SLIDESHOW */
+
+    .slideshow {
+
+        min-height: 80vh;
+    }
+
+
+    .slides {
+
+        width: 92%;
+
+        height: 60vh;
+    }
+
+
+    .description {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+        padding:
+            20px
+            15px;
+
+        font-size: 14px;
+    }
+
+
+    .slide img {
+
+        transform: none;
+    }
+
+
+    .dots {
+
+        bottom: 3%;
+    }
+
+
+    /* END */
+
+    .end {
+
+        min-height: 80vh;
+
+        padding-top: 0.5%;
+
+        padding-bottom: 8%;
+
+        font-size: large;
+        box-shadow:
+        inset black 0px 0px 400000px 150px;
+    }
+
+
+    .end .head {
+
+        margin-top: 10%;
+    }
+
+
+    .line {
+
+        width: 20vw;
+    }
+
+
+    .last {
+
+        font-size: large;
+    }
+
+
+    .emoji {
+
+        font-size: large;
+    }
+
+}
