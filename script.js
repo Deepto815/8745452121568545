@@ -34,7 +34,7 @@ loader.innerHTML = `
     <div class="loader-content">
 
         <div class="loader-title">
-            INITIALIZING CHEMISTRY...
+            INITIALIZING SUPRISE...
         </div>
 
         <div class="loader-bar">
@@ -62,10 +62,11 @@ const status = loader.querySelector(".loader-status");
 const messages = [
     "LOADING...",
     "ANALYZING REACTIONS...",
-    "STABILIZING COMPOUNDS...",
-    "CHECKING DOUBTS...",
-    "PREVENTING ESSAY WRITING...",
-    "CHEMISTRY SYSTEM READY ✓"
+    "SOLVEING NUMERICALS...",
+    "CHECKING BLOOD PRESSURE...",
+    "SOLVING PROBLEMS...",
+    "CODING THE WEBSITE...",
+    "GIFT IS READY ✓"
 ];
 
 let messageIndex = 0;
@@ -93,7 +94,7 @@ window.addEventListener("load", () => {
 
     clearInterval(messageInterval);
 
-    status.textContent = "CHEMISTRY SYSTEM READY ✓";
+    status.textContent = "GIFT FOR THE GOAT IS READY ✓";
 
 
     // Calculate how long loader has already been visible
