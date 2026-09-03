@@ -19,7 +19,7 @@ buttons[1].addEventListener("click", () => {
 
 
 // ===============================
-// CHEMISTRY LOADING SCREEN
+// LOADING SCREEN
 // ===============================
 
 const startTime = Date.now();
@@ -34,7 +34,7 @@ loader.innerHTML = `
     <div class="loader-content">
 
         <div class="loader-title">
-            INITIALIZING SUPRISE...
+            INITIALIZING SURPRISE...
         </div>
 
         <div class="loader-bar">
@@ -61,12 +61,13 @@ const status = loader.querySelector(".loader-status");
 
 const messages = [
     "LOADING...",
-    "ANALYZING REACTIONS...",
-    "SOLVEING NUMERICALS...",
-    "CHECKING BLOOD PRESSURE...",
-    "SOLVING PROBLEMS...",
-    "CODING THE WEBSITE...",
-    "GIFT IS READY ✓"
+    "INITIALIZING KNOWLEDGE...",
+    "SOLVING NUMERICALS...",
+    "ANALYZING CHEMICAL REACTIONS...",
+    "CHECKING BIOLOGICAL SYSTEMS...",
+    "COMPILING CODE...",
+    "CALCULATING EVERYTHING...",
+    "GIFT FOR THE GOAT IS READY ✓"
 ];
 
 let messageIndex = 0;
@@ -92,12 +93,14 @@ const messageInterval = setInterval(() => {
 
 window.addEventListener("load", () => {
 
+    // Stop changing messages
     clearInterval(messageInterval);
 
+    // Final message
     status.textContent = "GIFT FOR THE GOAT IS READY ✓";
 
 
-    // Calculate how long loader has already been visible
+    // Calculate how long the loader has been visible
     const elapsed = Date.now() - startTime;
 
 
@@ -107,7 +110,7 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
 
-        // Tiny pause while READY is visible
+        // Keep READY message visible for a tiny moment
         setTimeout(() => {
 
             loader.classList.add("loaded");
@@ -137,13 +140,18 @@ const dots = document.querySelectorAll(".dot");
 let currentSlide = 0;
 
 
-// Show selected slide
+// ===============================
+// SHOW SLIDE
+// ===============================
+
 function showSlide(index) {
 
     slides[currentSlide].classList.remove("active");
     dots[currentSlide].classList.remove("active");
 
+
     currentSlide = index;
+
 
     slides[currentSlide].classList.add("active");
     dots[currentSlide].classList.add("active");
